@@ -5,7 +5,7 @@
 
   handleSubmit: (e) ->
     e.preventDefault()
-    $.post '', { contact: @state }, (data) =>
+    $.post "/contacts", { contact: @state }, (data) =>
       @props.handleNewContact data
       @setState @getInitialState()
     , 'JSON'
