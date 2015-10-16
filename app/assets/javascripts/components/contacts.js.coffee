@@ -27,8 +27,10 @@
         'Contacts'
       React.createElement ContactForm, handleNewContact: @addContact
       React.DOM.hr null
+      React.DOM.div
+        'click to edit'
       React.DOM.table
-        className: 'table table-bordered'
+        className: 'table table-hover'
         React.DOM.thead null,
           React.DOM.tr null,
             React.DOM.th null, 'First Name'

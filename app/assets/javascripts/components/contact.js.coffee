@@ -34,13 +34,15 @@
 
   contactRow: ->
     React.DOM.tr null,
-      React.DOM.td null, @props.contact.first_name
-      React.DOM.td null, @props.contact.last_name
-      React.DOM.td null,
-        React.DOM.a
-          className: 'btn btn-default'
-          onClick: @handleToggle
-          'Edit'
+      React.DOM.td
+        className: ''
+        onClick: @handleToggle
+        @props.contact.first_name
+      React.DOM.td
+        onClick: @handleToggle
+        @props.contact.last_name
+      React.DOM.td
+        className: 'text-right'
         React.DOM.a
           className: 'btn btn-danger'
           onClick: @handleDelete
@@ -60,7 +62,8 @@
           type: 'text'
           defaultValue: @props.contact.last_name
           ref: 'last_name'
-      React.DOM.td null,
+      React.DOM.td
+        className: 'text-right'
         React.DOM.a
           className: 'btn btn-default'
           onClick: @handleEdit
