@@ -26,11 +26,10 @@
         className: 'title'
         'Contacts'
       React.createElement ContactForm, handleNewContact: @addContact
-      React.DOM.hr null
       React.DOM.div
         'click to edit'
       React.DOM.table
-        className: 'table table-hover'
+        className: 'striped'
         React.DOM.thead null,
           React.DOM.tr null,
             React.DOM.th null, 'First Name'

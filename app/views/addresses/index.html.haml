@@ -1,0 +1,28 @@
+%p#notice= notice
+%h1 Listing Addresses
+%table.striped
+  %thead
+    %tr
+      %th Address type
+      %th Street
+      %th City
+      %th State
+      %th Zip
+      %th Country
+      %th Contact
+      %th{:colspan => "3"}
+  %tbody
+    - @addresses.each do |address|
+      %tr
+        %td= address.address_type
+        %td= address.street
+        %td= address.city
+        %td= address.state
+        %td= address.zip
+        %td= address.country
+        %td= address.contact
+        %td= link_to 'Show', address
+        %td= link_to 'Edit', edit_address_path(address)
+        %td= link_to 'Destroy', address, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Address', new_address_path

@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title AddressBook
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no", :name => "viewport"}/
+  %body
+    .row
+      .col.s6
+        &nbsp;
+      .col.s6.right-align
+        .chip
+          %img{src: 'https://avatars2.githubusercontent.com/u/1001049?v=3&s=460'}
+          Jack
+    .row
+      = yield
